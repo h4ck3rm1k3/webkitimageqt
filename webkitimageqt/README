@@ -1,3 +1,7 @@
+This has been updated to build deb files on debian/ubuntu.
+The new repository is :
+http://github.com/h4ck3rm1k3/webkitimageqt
+
 A plugin for JOSM that can query any WMS server for background images.
 Also supports Metacarta's map rectifier.
 Supersedes the "Landsat" plugin, as the WMS plugin can do everything the

@@ -16,16 +16,16 @@
 .\" .sp <n>    insert n+1 empty lines
 .\" for manpage-specific macros, see man(7)
 .SH NAME
-webkitimageqt \- program to do something
+webkitimageqt \- wms plugin for josm
 .SH SYNOPSIS
-.B webkitimageqt
+.B export http_proxy=X; webkit-image url 
 .RI [ options ] " files" ...
 .br
 .B bar
 .RI [ options ] " files" ...
 .SH DESCRIPTION
 This manual page documents briefly the
-.B webkitimageqt
+.B webkitimageqt (webkit-image)
 and
 .B bar
 commands.
@@ -33,27 +33,21 @@ commands.
 .\" TeX users may be more comfortable with the \fB<whatever>\fP and
 .\" \fI<whatever>\fP escape sequences to invode bold face and italics,
 .\" respectively.
-\fBwebkitimageqt\fP is a program that...
+\fBwebkitimageqt\fP is a plugin for JOSM that can query any WMS server for background images.
+Also supports Metacarta's map rectifier.
+Supersedes the "Landsat" plugin, as the WMS plugin can do everything the
+landsat plugin could plus more.
+
 .SH OPTIONS
-These programs follow the usual GNU command line syntax, with long
-options starting with two dashes (`-').
-A summary of options is included below.
-For a complete description, see the Info files.
-.TP
-.B \-h, \-\-help
-Show summary of options.
-.TP
-.B \-v, \-\-version
-Show version of program.
+The only options is the http_proxy environment variable and the url as a command line.
+This program is used by josm.
+
 .SH SEE ALSO
-.BR bar (1),
-.BR baz (1).
+.BR http://josm.openstreetmap.de
+.BR http://openstreetmap.org
 .br
-The programs are documented fully by
-.IR "The Rise and Fall of a Fooish Bar" ,
-available via the Info system.
 .SH AUTHOR
-webkitimageqt was written by <upstream author>.
+webkitimageqt was written by tim <chippy2005@gmail.com>.
 .PP
-This manual page was written by Michael DuPont <mdupont@mdupont-desktop2>,
+This manual page was written by James Michael DuPont <JamesMikeDuPont@googlemail.com>
 for the Debian project (but may be used by others).

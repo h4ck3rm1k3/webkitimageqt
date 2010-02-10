@@ -45,11 +45,11 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
 -->
 
   <!-- Fill in your name for FIRSTNAME and SURNAME. -->
-  <!ENTITY dhfirstname "FIRSTNAME">
-  <!ENTITY dhsurname   "SURNAME">
+  <!ENTITY dhfirstname "James Michael">
+  <!ENTITY dhsurname   "DuPont">
   <!-- dhusername could also be set to "&firstname; &surname;". -->  
-  <!ENTITY dhusername  "Michael DuPont">
-  <!ENTITY dhemail     "mdupont@mdupont-desktop2">
+  <!ENTITY dhusername  "James Michael DuPont">
+  <!ENTITY dhemail     "JamesMikeDuPont@googlemail.com">
   <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
        allowed: see man(7), man(1) and
        http://www.tldp.org/HOWTO/Man-Page/q2.html. -->
@@ -97,50 +97,14 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
   </refmeta>
   <refnamediv>
     <refname>&dhpackage;</refname>
-    <refpurpose>program to do something</refpurpose>
+    <refpurpose>plugin for JOSM that can query any WMS server for background images.</refpurpose>
   </refnamediv>
   <refsynopsisdiv>
     <cmdsynopsis>
       <command>&dhpackage;</command>
       <!-- These are several examples, how syntaxes could look -->
       <arg choice="plain"><option>-e <replaceable>this</replaceable></option></arg>
-      <arg choice="opt"><option>--example=<parameter>that</parameter></option></arg>
-      <arg choice="opt">
-        <group choice="req">
-          <arg choice="plain"><option>-e</option></arg>
-          <arg choice="plain"><option>--example</option></arg>
-        </group>
-        <replaceable class="option">this</replaceable>
-      </arg>
-      <arg choice="opt">
-        <group choice="req">
-          <arg choice="plain"><option>-e</option></arg>
-          <arg choice="plain"><option>--example</option></arg>
-        </group>
-        <group choice="req">
-          <arg choice="plain"><replaceable>this</replaceable></arg>
-          <arg choice="plain"><replaceable>that</replaceable></arg>
-        </group>
-      </arg>
-    </cmdsynopsis>
-    <cmdsynopsis>
-      <command>&dhpackage;</command>
-      <!-- Normally the help and version options make the programs stop
-           right after outputting the requested information. -->
-      <group choice="opt">
-        <arg choice="plain">
-          <group choice="req">
-            <arg choice="plain"><option>-h</option></arg>
-            <arg choice="plain"><option>--help</option></arg>
-          </group>
-        </arg>
-        <arg choice="plain">
-          <group choice="req">
-            <arg choice="plain"><option>-v</option></arg>
-            <arg choice="plain"><option>--version</option></arg>
-          </group>
-        </arg>
-      </group>
+      <arg choice="opt"><option>url</option></arg>
     </cmdsynopsis>
   </refsynopsisdiv>
   <refsect1 id="description">
@@ -158,134 +122,22 @@ man(1), man(7), http://www.tldp.org/HOWTO/Man-Page/
   </refsect1>
   <refsect1 id="options">
     <title>OPTIONS</title>
-    <para>The program follows the usual GNU command line syntax,
-      with long options starting with two dashes (`-').  A summary of
-      options is included below.  For a complete description, see the
-      <citerefentry>
-        <refentrytitle>info</refentrytitle>
-        <manvolnum>1</manvolnum>
-      </citerefentry> files.</para>
-    <variablelist>
-      <!-- Use the variablelist.term.separator and the
-           variablelist.term.break.after parameters to
-           control the term elements. -->
-      <varlistentry>
-        <term><option>-e <replaceable>this</replaceable></option></term>
-        <term><option>--example=<replaceable>that</replaceable></option></term>
-        <listitem>
-          <para>Does this and that.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>-h</option></term>
-        <term><option>--help</option></term>
-        <listitem>
-          <para>Show summary of options.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>-v</option></term>
-        <term><option>--version</option></term>
-        <listitem>
-          <para>Show version of program.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
-  </refsect1>
-  <refsect1 id="files">
-    <title>FILES</title>
-    <variablelist>
-      <varlistentry>
-        <term><filename>/etc/foo.conf</filename></term>
-        <listitem>
-          <para>The system-wide configuration file to control the
-            behaviour of <application>&dhpackage;</application>. See
-            <citerefentry>
-              <refentrytitle>foo.conf</refentrytitle>
-              <manvolnum>5</manvolnum>
-            </citerefentry> for further details.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><filename>${HOME}/.foo.conf</filename></term>
-        <listitem>
-          <para>The per-user configuration file to control the
-             behaviour of <application>&dhpackage;</application>. See
-             <citerefentry>
-               <refentrytitle>foo.conf</refentrytitle>
-               <manvolnum>5</manvolnum>
-             </citerefentry> for further details.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+    <para>The only options is the http_proxy environment variable and the url as a command line.
+This program is used by josm.
+
+This programs does NOT follow the usual &gnu; command line syntax,
+The program follows the usual GNU command line syntax,
   </refsect1>
   <refsect1 id="environment">
     <title>ENVIONMENT</title>
     <variablelist>
       <varlistentry>
-        <term><envar>FOO_CONF</envar></term>
+        <term><envar>http_proxy</envar></term>
         <listitem>
-          <para>If used, the defined file is used as configuration
-            file (see also <xref linkend="files"/>).</para>
+          <para>If used, the proxy is used</para>
         </listitem>
       </varlistentry>
     </variablelist>
-  </refsect1>
-  <refsect1 id="diagnostics">
-    <title>DIAGNOSTICS</title>
-    <para>The following diagnostics may be issued
-      on <filename class="devicefile">stderr</filename>:</para>
-    <variablelist>
-      <varlistentry>
-        <term><errortext>Bad configuration file. Exiting.</errortext></term>
-        <listitem>
-          <para>The configuration file seems to contain a broken configuration
-            line. Use the <option>--verbose</option> option, to get more info.
-          </para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
-    <para><command>&dhpackage;</command> provides some return codes, that can
-      be used in scripts:</para>
-    <segmentedlist>
-      <segtitle>Code</segtitle>
-      <segtitle>Diagnostic</segtitle>
-      <seglistitem>
-        <seg><errorcode>0</errorcode></seg>
-        <seg>Program exited successfully.</seg>
-      </seglistitem>
-      <seglistitem>
-        <seg><errorcode>1</errorcode></seg>
-        <seg>The configuration file seems to be broken.</seg>
-      </seglistitem>
-    </segmentedlist>
-  </refsect1>
-  <refsect1 id="bugs">
-    <!-- Or use this section to tell about upstream BTS. -->
-    <title>BUGS</title>
-    <para>The program is currently limited to only work
-      with the <package>foobar</package> library.</para>
-    <para>The upstreams <acronym>BTS</acronym> can be found
-      at <ulink url="http://bugzilla.foo.tld"/>.</para>
-  </refsect1>
-  <refsect1 id="see_also">
-    <title>SEE ALSO</title>
-    <!-- In alpabetical order. -->
-    <para><citerefentry>
-        <refentrytitle>bar</refentrytitle>
-        <manvolnum>1</manvolnum>
-      </citerefentry>, <citerefentry>
-        <refentrytitle>baz</refentrytitle>
-        <manvolnum>1</manvolnum>
-      </citerefentry>, <citerefentry>
-        <refentrytitle>foo.conf</refentrytitle>
-        <manvolnum>5</manvolnum>
-      </citerefentry></para>
-    <para>The programs are documented fully by <citetitle>The Rise and
-      Fall of a Fooish Bar</citetitle> available via the <citerefentry>
-        <refentrytitle>info</refentrytitle>
-        <manvolnum>1</manvolnum>
-      </citerefentry> system.</para>
   </refsect1>
 </refentry>
 

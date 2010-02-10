@@ -17,15 +17,15 @@ manpage.1: manpage.sgml
   -->
 
   <!-- Fill in your name for FIRSTNAME and SURNAME. -->
-  <!ENTITY dhfirstname "<firstname>FIRSTNAME</firstname>">
-  <!ENTITY dhsurname   "<surname>SURNAME</surname>">
+  <!ENTITY dhfirstname "<firstname>James Michael</firstname>">
+  <!ENTITY dhsurname   "<surname>DuPont</surname>">
   <!-- Please adjust the date whenever revising the manpage. -->
-  <!ENTITY dhdate      "<date>September  5, 2009</date>">
+  <!ENTITY dhdate      "<date>Feb  10, 2010</date>">
   <!-- SECTION should be 1-8, maybe w/ subsection other parameters are
        allowed: see man(7), man(1). -->
-  <!ENTITY dhsection   "<manvolnum>SECTION</manvolnum>">
-  <!ENTITY dhemail     "<email>mdupont@mdupont-desktop2</email>">
-  <!ENTITY dhusername  "Michael DuPont">
+  <!ENTITY dhsection   "<manvolnum>1</manvolnum>">
+  <!ENTITY dhemail     "<email>JamesMikeDuPont@googlemail.com</email>">
+  <!ENTITY dhusername  "James Michael DuPont">
   <!ENTITY dhucpackage "<refentrytitle>WEBKITIMAGEQT</refentrytitle>">
   <!ENTITY dhpackage   "webkitimageqt">
 
@@ -57,67 +57,54 @@ manpage.1: manpage.sgml
   <refnamediv>
     <refname>&dhpackage;</refname>
 
-    <refpurpose>program to do something</refpurpose>
+    <refpurpose>plugin for JOSM that can query any WMS server for background images.</refpurpose>
   </refnamediv>
   <refsynopsisdiv>
     <cmdsynopsis>
       <command>&dhpackage;</command>
 
-      <arg><option>-e <replaceable>this</replaceable></option></arg>
+      <arg><option>url <replaceable>url of the program</replaceable></option></arg>
 
-      <arg><option>--example <replaceable>that</replaceable></option></arg>
+      <arg><option>http_proxy <replaceable>environmental variable</replaceable></option></arg>
     </cmdsynopsis>
   </refsynopsisdiv>
   <refsect1>
     <title>DESCRIPTION</title>
 
-    <para>This manual page documents briefly the
-      <command>&dhpackage;</command> and <command>bar</command>
-      commands.</para>
+    <para>
+
+This manual page documents briefly the
+      <command>&dhpackage;</command> 
+     </para>
 
     <para>This manual page was written for the &debian; distribution
       because the original program does not have a manual page.
       Instead, it has documentation in the &gnu;
       <application>Info</application> format; see below.</para>
 
-    <para><command>&dhpackage;</command> is a program that...</para>
+    <para><command>&dhpackage;</command>  is a plugin for JOSM that can query any WMS server for background images.
+Also supports Metacarta's map rectifier.
+Supersedes the "Landsat" plugin, as the WMS plugin can do everything the
+landsat plugin could plus more.
+    </para>
+
 
   </refsect1>
   <refsect1>
     <title>OPTIONS</title>
 
-    <para>These programs follow the usual &gnu; command line syntax,
-      with long options starting with two dashes (`-').  A summary of
-      options is included below.  For a complete description, see the
-      <application>Info</application> files.</para>
+    <para>The only options is the http_proxy environment variable and the url as a command line.
+This program is used by josm.
 
-    <variablelist>
-      <varlistentry>
-        <term><option>-h</option>
-          <option>--help</option>
-        </term>
-        <listitem>
-          <para>Show summary of options.</para>
-        </listitem>
-      </varlistentry>
-      <varlistentry>
-        <term><option>-v</option>
-          <option>--version</option>
-        </term>
-        <listitem>
-          <para>Show version of program.</para>
-        </listitem>
-      </varlistentry>
-    </variablelist>
+This programs does NOT follow the usual &gnu; command line syntax,
+
   </refsect1>
   <refsect1>
     <title>SEE ALSO</title>
 
-    <para>bar (1), baz (1).</para>
-
-    <para>The programs are documented fully by <citetitle>The Rise and
-      Fall of a Fooish Bar</citetitle> available via the
-      <application>Info</application> system.</para>
+    <para>http://josm.openstreetmap.de</para>
+    <para>http://openstreetmap.org</para>
+    
   </refsect1>
   <refsect1>
     <title>AUTHOR</title>

@@ -1,24 +1,26 @@
-This package was debianized by Michael DuPont <mdupont@mdupont-desktop2> on
+This package was debianized by James Michael DuPont <JamesMikeDuPont@googlemail.com> on
 Sat, 05 Sep 2009 10:34:47 +0200.
 
-It was downloaded from <url://example.com>
+It was downloaded from <http://svn.openstreetmap.org/applications/editors/josm/plugins/wmsplugin/>
 
 Upstream Author(s):
 
-    <put author's name and email here>
-    <likewise for another author>
+  This plugin has been created by tim <chippy2005@gmail.com>
+  and has received major contributions from Frederik Ramm
+  <frederik@remote.org>. It is based on the "Landsat" plugin
+  by Nick Whitelegg <Nick.Whitelegg@solent.ac.uk> and includes
+  some code from Jonathan Stott <jonathan@jstott.me.uk>, Gabriel Ebner
+  <ge@gabrielebner.at> and Ulf Lamping <ulf.lamping@web.de>.
+  The automatic tiles downloading and Yahoo downloader made by Petr Dlouhý <petr.dlouhy@email.cz>
 
 Copyright:
-
-    <Copyright (C) YYYY Name OfAuthor>
-    <likewise for another author>
+  Copyright 2001-2010 tim <chippy2005@gmail.com> et al.
 
 License:
 
-    <Put the license of the package here indented by 4 spaces>
+    This plugin is licensed under the GNU GPL v2 or later.
+    
 
-The Debian packaging is (C) 2009, Michael DuPont <mdupont@mdupont-desktop2> and
+The Debian packaging is (C) 2009, James Michael DuPont <JamesMikeDuPont@googlemail.com> and
 is licensed under the GPL, see `/usr/share/common-licenses/GPL'.
 
-# Please also look if there are files or directories which have a
-# different copyright/license attached and list them here.
