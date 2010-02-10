@@ -1,0 +1,13 @@
+Source: webkitimageqt
+Section: unknown
+Priority: extra
+Maintainer: Michael DuPont <mdupont@mdupont-desktop2>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.7.3
+Homepage: <insert the upstream URL, if relevant>
+
+Package: webkitimageqt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
