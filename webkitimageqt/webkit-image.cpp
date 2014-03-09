@@ -44,10 +44,7 @@ public slots:
       BINARYSTDOUT
       if(f.open(stdout, QIODevice::WriteOnly|QIODevice::Unbuffered))
       {
-        if(!im.save(&f, "JPEG"))
-        {
-          im.save(&f, "PNG");
-        }
+        im.save(&f, "PNG");
       }
     }
     emit finish();
